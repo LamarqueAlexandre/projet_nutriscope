@@ -4,3 +4,4 @@ data/
 brouillons/
 *.egg-info/
 __pycache__/
+.env
