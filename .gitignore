@@ -5,3 +5,4 @@ brouillons/
 *.egg-info/
 __pycache__/
 .env
+img/
