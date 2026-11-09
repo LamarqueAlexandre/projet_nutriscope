@@ -6,3 +6,5 @@ brouillons/
 __pycache__/
 .env
 img/
+.claude/
+atelier_scanner_etiquettes/
