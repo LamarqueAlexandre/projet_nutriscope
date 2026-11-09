@@ -17,6 +17,8 @@ dependencies = [
     "sqlalchemy",
     "psycopg2-binary",
     "python-dotenv",
+    "seaborn",
+    "openai",
 ]
 
 [project.optional-dependencies]
