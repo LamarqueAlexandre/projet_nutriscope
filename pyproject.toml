@@ -19,6 +19,7 @@ dependencies = [
     "python-dotenv",
     "seaborn",
     "openai",
+    "chromadb == 1.5.9",
 ]
 
 [project.optional-dependencies]
