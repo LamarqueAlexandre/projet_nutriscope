@@ -1,3 +1,11 @@
 .venv
 *.parquet
 data/
+brouillons/
+*.egg-info/
+__pycache__/
+.env
+img/
+.claude/
+atelier_scanner_etiquettes/
+resultats/
