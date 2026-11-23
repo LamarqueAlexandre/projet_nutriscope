@@ -19,6 +19,8 @@ dependencies = [
     "python-dotenv",
     "seaborn",
     "openai",
+    "langchain_core",
+    "pydantic"
 ]
 
 [project.optional-dependencies]
