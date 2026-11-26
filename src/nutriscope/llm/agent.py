@@ -3,7 +3,7 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langchain_ollama import ChatOllama
 
 from nutriscope.llm.journal import Journal
-from nutriscope.llm.prompts import SYSTEM_PROMPT_V1
+from nutriscope.llm.prompts import SYSTEM_PROMPT_V2
 from nutriscope.llm.tools import search_product, substitute, answer_with_source
 
 THREAD_ID = 'utilisateur-1'
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     agent = create_agent(
         model,
         tools=tools,
-        system_prompt=SYSTEM_PROMPT_V1,
+        system_prompt=SYSTEM_PROMPT_V2,
         checkpointer=InMemorySaver()
     )
 
