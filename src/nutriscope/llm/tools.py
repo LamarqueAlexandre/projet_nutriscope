@@ -5,6 +5,8 @@ products = [
         'name': 'coca',
         'code': '5000112356001',
         'nutriscore': 'E',
+        'unite': 'pour 100 ml',
+        'source': 'Base de test NutriScope, code-barres 5000112356001',
         'nutriments': {
             'sucres': 10.6,
             'glucides': 11.5,
@@ -16,6 +18,8 @@ products = [
         'name': 'jus d\'orange',
         'code': '3016816039043',
         'nutriscore': 'B',
+        'unite': 'pour 100 ml',
+        'source': 'Base de test NutriScope, code-barres 3016816039043',
         'nutriments': {
             'sucres': 8.1,
             'glucides': 11.8,
@@ -27,6 +31,8 @@ products = [
         'name': 'eau',
         'code': '5449000050044',
         'nutriscore': 'A',
+        'unite': 'pour 100 ml',
+        'source': 'Base de test NutriScope, code-barres 5449000050044',
         'nutriments': {
             'sucres': 0,
             'glucides': 0,
@@ -38,6 +44,8 @@ products = [
         'name': 'lait',
         'code': '3033490134132',
         'nutriscore': 'B',
+        'unite': 'pour 100 ml',
+        'source': 'Base de test NutriScope, code-barres 3033490134132',
         'nutriments': {
             'sucres': 4.8,
             'glucides': 4.8,
@@ -49,6 +57,8 @@ products = [
         'name': 'pomme',
         'code': '5000226000045',
         'nutriscore': 'A',
+        'unite': 'pour 100 g',
+        'source': 'Base de test NutriScope, code-barres 5000226000045',
         'nutriments': {
             'sucres': 10.4,
             'glucides': 13.8,
@@ -60,6 +70,8 @@ products = [
         'name': 'pain',
         'code': '3083681046129',
         'nutriscore': 'C',
+        'unite': 'pour 100 g',
+        'source': 'Base de test NutriScope, code-barres 3083681046129',
         'nutriments': {
             'sucres': 4.2,
             'glucides': 49,
@@ -71,6 +83,8 @@ products = [
         'name': 'poulet-filet',
         'code': '3267340001239',
         'nutriscore': 'A',
+        'unite': 'pour 100 g',
+        'source': 'Base de test NutriScope, code-barres 3267340001239',
         'nutriments': {
             'sucres': 0,
             'glucides': 0,
@@ -82,6 +96,8 @@ products = [
         'name': 'yaourt',
         'code': '3033491349004',
         'nutriscore': 'B',
+        'unite': 'pour 100 g',
+        'source': 'Base de test NutriScope, code-barres 3033491349004',
         'nutriments': {
             'sucres': 3.6,
             'glucides': 3.6,
@@ -93,6 +109,8 @@ products = [
         'name': 'banane',
         'code': '5000227006729',
         'nutriscore': 'B',
+        'unite': 'pour 100 g',
+        'source': 'Base de test NutriScope, code-barres 5000227006729',
         'nutriments': {
             'sucres': 12.2,
             'glucides': 23,
@@ -104,6 +122,8 @@ products = [
         'name': 'fromage',
         'code': '3033490024121',
         'nutriscore': 'D',
+        'unite': 'pour 100 g',
+        'source': 'Base de test NutriScope, code-barres 3033490024121',
         'nutriments': {
             'sucres': 0.7,
             'glucides': 1.3,
@@ -148,6 +168,8 @@ def substitute(produit: dict) -> dict:
         'name': 'coca cola zero',
         'code': '00123456',
         'nutriscore': 'C',
+        'unite': 'pour 100 ml',
+        'source': 'Base de test NutriScope, code-barres 00123456',
         'nutriments': {
             'sucres': 0,
             'glucides': 0,

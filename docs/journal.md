@@ -81,3 +81,21 @@
 * energy_kj_100g n'est pas stocké (absent de l'extrait nettoyé du périmètre) - On a gardé energy_kcal_100g
 
 ### Bloqué : Aucun blocage
+
+## 26/11/2026 : TP 22 — Assistant LLM, limites connues de la v1
+
+### Limites connues
+* **Questions « pourquoi » sur le Nutri-Score** : l'assistant explique à partir des seules valeurs de la fiche
+  (sucres, glucides, calories, sodium), alors que le calcul du Nutri-Score utilise d'autres critères.
+  Il ajoute encore parfois des informations générales non sourcées (ex. « par rapport aux apports recommandés »).
+  → À traiter par l'outil `answer_with_source` (RAG) quand il sera disponible.
+* **`answer_with_source` n'est pas implémenté** : il renvoie un message fixe. Les questions générales
+  sur l'alimentation ne sont donc pas encore couvertes.
+* **Données de test** : les outils utilisent 10 produits fictifs (source « Base de test NutriScope »),
+  et `substitute` renvoie toujours le même produit (coca cola zero), quel que soit le produit demandé.
+* **Recherche de produit stricte** : `search_product` ne trouve un produit que si le nom correspond exactement
+  (ex. « coca bio » n'est pas trouvé).
+* **Tests limités** : le prompt v1 a été testé sur 4 questions enchaînées dans une seule conversation.
+  Les refus (conseil médical, allergies, hors sujet) n'ont pas encore été testés.
+* **Mémoire de conversation** : l'historique est gardé en mémoire vive (`InMemorySaver`), il est perdu au redémarrage
+  et grossit à chaque question (975 tokens d'entrée au 1er appel, 1 743 au dernier appel de la 4ᵉ question).

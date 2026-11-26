@@ -19,6 +19,9 @@ dependencies = [
     "python-dotenv",
     "seaborn",
     "openai",
+    "langchain",
+    "langgraph",
+    "langchain_ollama",
     "langchain_core",
     "pydantic"
 ]
