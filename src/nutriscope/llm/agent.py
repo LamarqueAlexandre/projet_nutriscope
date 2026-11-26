@@ -2,8 +2,10 @@ from langchain.agents import create_agent
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain_ollama import ChatOllama
 
+from nutriscope.llm.journal import Journal
 from nutriscope.llm.tools import search_product, substitute, answer_with_source
 
+THREAD_ID = 'utilisateur-1'
 OLLAMA_URL = 'http://localhost:11434'
 MODEL = 'qwen3:8b'
 EMBEDDING_MODEL = 'qwen3-embedding:0.6b'
@@ -28,8 +30,6 @@ questions = [
     'Propose-moi mieux.',
     'Et en bio ?'
 ]
-
-config = {'configurable': {'thread_id': 'utilisateur-1'}}
 
 prompt = """Tu es l'assistant conversationnel de l'application NutriScope.
 
@@ -69,7 +69,11 @@ if __name__ == '__main__':
     )
 
     for question in questions:
-        print(f'La question est : {question}')
+        journal = Journal()
+        config = {
+            'configurable': {'thread_id': THREAD_ID},
+            'callbacks': [journal]
+        }
 
         result = agent.invoke(
                 {
@@ -85,6 +89,5 @@ if __name__ == '__main__':
 
         result['messages'][-1].pretty_print()
 
-    print("\n=== Déroulé complet de la conversation ===")
-    for message in result['messages']:
-        message.pretty_print()
+        for ligne in journal.lignes:
+            print(ligne)
